@@ -1,0 +1,8 @@
+{
+  "name": "muslim-wedding-invitation",
+  "version": "1.0.0",
+  "description": "Wedding Invitation clone of https://muslimweding.vercel.app",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
