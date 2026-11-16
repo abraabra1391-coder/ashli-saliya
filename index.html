@@ -1,476 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-background">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#FAF7F2" />
-  <meta name="color-scheme" content="light" />
-  <title>Mohammad Ashil &amp; Dr. Mariyamath Saliya | Wedding Invitation</title>
-  <meta name="description" content="With the blessing of Allah, we joyfully invite you to celebrate the marriage of Mohammad Ashil &amp; Dr. Mariyamath Saliya." />
-  <meta property="og:title" content="Mohammad Ashil &amp; Dr. Mariyamath Saliya | Wedding Invitation" />
-  <meta property="og:description" content="With the blessing of Allah, we joyfully invite you to celebrate the marriage of Mohammad Ashil &amp; Dr. Mariyamath Saliya." />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Mohammad Ashil &amp; Dr. Mariyamath Saliya | Wedding Invitation" />
-  <meta name="twitter:description" content="With the blessing of Allah, we joyfully invite you to celebrate the marriage of Mohammad Ashil &amp; Dr. Mariyamath Saliya." />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF7F2">
+  <meta name="color-scheme" content="light">
+  <title>Wedding Invitation</title>
+  <meta name="description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  
-  <link rel="preload" as="image" href="images/floral-corner.png" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="antialiased">
-  <main class="relative">
-    <!-- Background Audio -->
-    <audio id="bg-audio" src="audio/anlatmam.mp3" autoplay loop preload="auto" playsinline aria-label="Background wedding music"></audio>
+<body>
+  <audio id="bgMusic" loop preload="auto"></audio>
 
-    <!-- Header Navigation -->
-    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500 border-b border-transparent">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#home" class="font-serif text-xl tracking-[0.2em] text-burgundy">S <span class="text-gold">&amp;</span> A</a>
-        <ul class="hidden items-center gap-10 md:flex">
-          <li>
-            <a href="#home" class="group relative font-sans text-xs uppercase tracking-[0.25em] text-foreground/80 transition-colors hover:text-burgundy">
-              Home
-              <span class="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#story" class="group relative font-sans text-xs uppercase tracking-[0.25em] text-foreground/80 transition-colors hover:text-burgundy nav-trigger">
-              Our Story
-              <span class="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          </li>
-          <li>
-            <a href="#venue" class="group relative font-sans text-xs uppercase tracking-[0.25em] text-foreground/80 transition-colors hover:text-burgundy nav-trigger">
-              Ceremonies
-              <span class="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          </li>
-        </ul>
-        <button type="button" id="menu-btn" class="text-burgundy md:hidden" aria-label="Open menu" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-6" aria-hidden="true">
-            <path d="M4 5h16"></path>
-            <path d="M4 12h16"></path>
-            <path d="M4 19h16"></path>
-          </svg>
-        </button>
-      </nav>
+  <header class="nav" id="nav">
+    <a class="nav__mark" href="#home" data-bind="monogram"></a>
+    <nav class="nav__links" aria-label="Main"></nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </header>
 
-      <!-- Mobile Fullscreen Menu -->
-      <div id="mobile-menu" class="fixed inset-0 z-50 flex flex-col paper-texture transition-opacity duration-500 md:hidden pointer-events-none opacity-0">
-        <div class="flex items-center justify-between px-6 py-4">
-          <span class="font-serif text-xl tracking-[0.2em] text-burgundy">S <span class="text-gold">&amp;</span> A</span>
-          <button type="button" id="close-menu-btn" class="text-burgundy" aria-label="Close menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x size-7" aria-hidden="true">
-              <path d="M18 6 6 18"></path>
-              <path d="m6 6 12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <ul class="flex flex-1 flex-col items-center justify-center gap-10">
-          <li><a href="#home" class="mobile-nav-link font-serif text-3xl tracking-wide text-burgundy">Home</a></li>
-          <li><a href="#story" class="mobile-nav-link font-serif text-3xl tracking-wide text-burgundy nav-trigger">Our Story</a></li>
-          <li><a href="#venue" class="mobile-nav-link font-serif text-3xl tracking-wide text-burgundy nav-trigger">Ceremonies</a></li>
-        </ul>
-      </div>
-    </header>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <p class="mobile-menu__mark" data-bind="monogram"></p>
+    <nav class="mobile-menu__links" aria-label="Mobile"></nav>
+  </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-[100svh] overflow-hidden paper-texture">
-      <div class="absolute inset-0 arabesque opacity-70" aria-hidden="true"></div>
-      <img alt="" aria-hidden="true" width="520" height="520" class="blend-floral pointer-events-none absolute -left-8 -top-6 w-40 select-none sm:w-56 md:w-72 lg:w-80" src="images/floral-corner.png" />
-      <img alt="" aria-hidden="true" width="520" height="520" class="blend-floral pointer-events-none absolute -right-8 -top-6 w-40 -scale-x-100 select-none sm:w-56 md:w-72 lg:w-80" src="images/floral-corner.png" />
-      <img alt="" aria-hidden="true" width="520" height="520" class="blend-floral pointer-events-none absolute -bottom-6 -left-8 w-36 -scale-y-100 select-none opacity-90 sm:w-52 md:w-64 lg:hidden" src="images/floral-corner.png" />
-      
-      <!-- Petals animation container -->
-      <div id="petals-container" class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true"></div>
-
-      <!-- Inset Gold Borders -->
-      <div class="pointer-events-none absolute inset-4 border border-gold/25 sm:inset-6 md:inset-8"></div>
-      <div class="pointer-events-none absolute inset-5 border border-gold/15 sm:inset-8 md:inset-10"></div>
-
-      <!-- Hero Main Content -->
-      <div class="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center px-8 pb-16 pt-24 text-center md:pt-28">
-        <p dir="rtl" lang="ar" class="font-arabic text-2xl leading-relaxed text-gold sm:text-3xl md:text-4xl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
-        <div class="flex items-center justify-center gap-3 mt-6" aria-hidden="true">
-          <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70 sm:w-24"></span>
-          <svg width="46" height="16" viewBox="0 0 46 16" fill="none" class="text-gold">
-            <path d="M23 2c2.5 3 5 4 8 4-3 0-5.5 1-8 4-2.5-3-5-4-8-4 3 0 5.5-1 8-4Z" fill="currentColor" fill-opacity="0.9"></path>
-            <circle cx="4" cy="8" r="1.6" fill="currentColor"></circle>
-            <circle cx="42" cy="8" r="1.6" fill="currentColor"></circle>
-            <path d="M9 8h6M31 8h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
-          </svg>
-          <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70 sm:w-24"></span>
-        </div>
-        <p class="mt-10 font-sans text-xs uppercase tracking-[0.5em] text-foreground/70">The Wedding Of</p>
-        <div class="mt-4 flex flex-col items-center">
-          <h1 class="font-serif text-5xl font-light capitalize leading-none text-burgundy sm:text-7xl md:text-8xl">Mohammad Ashil</h1>
-          <span class="my-2 font-serif text-4xl italic text-gold sm:text-5xl">&amp;</span>
-          <h1 class="font-serif text-5xl font-light capitalize leading-none text-burgundy sm:text-7xl md:text-8xl">Dr. Mariyamath Saliya</h1>
-        </div>
-        <p class="mt-8 max-w-md text-pretty font-serif text-lg italic leading-relaxed text-foreground/80 sm:text-xl">Together with their families, we invite you to celebrate the beginning of their forever.</p>
-        <div class="mt-9 flex flex-col items-center gap-1.5">
-          <p class="font-sans text-sm uppercase tracking-[0.4em] text-burgundy sm:text-base">11 • DECEMBER • 2026</p>
-          <span class="h-px w-14 bg-gold/50"></span>
-          <p class="mt-1 font-serif text-lg text-foreground/80">Seyyid Madani Dargah &amp; Juma Masjid</p>
-          <p class="font-sans text-xs uppercase tracking-[0.3em] text-foreground/60">Ullal, Mangalore</p>
-        </div>
-        <a href="#invitation" id="open-invitation-btn" class="group relative mt-10 inline-flex items-center gap-3 overflow-hidden rounded-sm border border-gold bg-burgundy px-9 py-4 font-sans text-xs uppercase tracking-[0.3em] text-ivory shadow-lg shadow-burgundy/20 transition-all duration-500 hover:tracking-[0.4em]">
-          <span class="absolute inset-0 -translate-x-full bg-deep-burgundy transition-transform duration-500 group-hover:translate-x-0"></span>
-          <span class="relative">Open Invitation</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Opened Content Container -->
-    <div id="invitation-content" class="hidden">
-      <!-- Invitation Section -->
-      <section id="invitation" class="relative overflow-hidden bg-warm-white py-24 md:py-32">
-        <div class="pointer-events-none absolute inset-0 arabesque opacity-60"></div>
-        <div class="relative mx-auto max-w-3xl px-6">
-          <div class="relative border border-gold/30 bg-ivory/70 px-6 py-16 text-center sm:px-14 md:py-20">
-            <span class="absolute left-3 top-3 size-6 border-l border-t border-gold/60"></span>
-            <span class="absolute right-3 top-3 size-6 border-r border-t border-gold/60"></span>
-            <span class="absolute bottom-3 left-3 size-6 border-b border-l border-gold/60"></span>
-            <span class="absolute bottom-3 right-3 size-6 border-b border-r border-gold/60"></span>
-            
-            <div class="reveal">
-              <span class="font-sans text-xs uppercase tracking-[0.35em] text-gold">Assalamu Alaikum</span>
-              <h2 class="mt-5 text-balance font-serif text-4xl font-light text-burgundy sm:text-5xl">With the Blessings of Allah</h2>
-              <div class="flex items-center justify-center gap-3 mt-7" aria-hidden="true">
-                <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70 sm:w-24"></span>
-                <svg width="46" height="16" viewBox="0 0 46 16" fill="none" class="text-gold">
-                  <path d="M23 2c2.5 3 5 4 8 4-3 0-5.5 1-8 4-2.5-3-5-4-8-4 3 0 5.5-1 8-4Z" fill="currentColor" fill-opacity="0.9"></path>
-                  <circle cx="4" cy="8" r="1.6" fill="currentColor"></circle>
-                  <circle cx="42" cy="8" r="1.6" fill="currentColor"></circle>
-                  <path d="M9 8h6M31 8h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
-                </svg>
-                <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70 sm:w-24"></span>
-              </div>
-            </div>
-
-            <div class="reveal" style="transition-delay: 150ms;">
-              <p class="mx-auto mt-9 max-w-xl text-pretty font-serif text-xl leading-relaxed text-foreground/85 sm:text-2xl">
-                In the name of Allah, the Most Gracious, the Most Merciful.
-              </p>
-              <p class="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-foreground/75">
-                With the blessing of Allah, we joyfully invite you to celebrate the marriage of Mohammad Ashil &amp; Dr. Mariyamath Saliya.
-              </p>
-            </div>
-
-            <div class="reveal" style="transition-delay: 250ms;">
-              <img src="images/floral-branch.png" alt="" aria-hidden="true" width="520" height="180" class="blend-floral mx-auto mt-10 w-64 sm:w-80" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Blessed Union Section -->
-      <section class="relative overflow-hidden bg-ivory py-24 md:py-32">
-        <div class="mx-auto max-w-5xl px-6">
-          <div class="reveal text-center">
-            <span class="font-sans text-xs uppercase tracking-[0.35em] text-gold">The Blessed Union</span>
-            <h2 class="mt-5 text-balance font-serif text-4xl font-light text-burgundy sm:text-5xl">Two Hearts, One Journey</h2>
-            <div class="flex items-center justify-center gap-3 mt-7" aria-hidden="true">
-              <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70 sm:w-24"></span>
-              <svg width="46" height="16" viewBox="0 0 46 16" fill="none" class="text-gold">
-                <path d="M23 2c2.5 3 5 4 8 4-3 0-5.5 1-8 4-2.5-3-5-4-8-4 3 0 5.5-1 8-4Z" fill="currentColor" fill-opacity="0.9"></path>
-                <circle cx="4" cy="8" r="1.6" fill="currentColor"></circle>
-                <circle cx="42" cy="8" r="1.6" fill="currentColor"></circle>
-                <path d="M9 8h6M31 8h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
-              </svg>
-              <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70 sm:w-24"></span>
-            </div>
-          </div>
-
-          <div class="mt-14 grid items-stretch gap-8 md:grid-cols-[1fr_auto_1fr]">
-            <!-- Bride Card -->
-            <div class="reveal" style="transition-delay: 100ms;">
-              <div class="group relative flex h-full flex-col items-center justify-between border border-gold/30 bg-warm-white px-8 py-12 text-center transition-all duration-500 hover:border-gold/70 hover:shadow-xl hover:shadow-burgundy/5">
-                <div class="flex flex-col items-center">
-                  <div class="flex size-28 items-center justify-center rounded-full border border-gold/50 bg-ivory transition-transform duration-500 group-hover:scale-105">
-                    <span class="font-serif text-5xl text-burgundy">S</span>
-                  </div>
-                  <p class="mt-6 font-sans text-xs uppercase tracking-[0.35em] text-gold">The Bride</p>
-                  <h3 class="mt-3 font-serif text-3xl text-burgundy sm:text-4xl">Dr. Mariyamath Saliya</h3>
-                  <span class="mt-4 h-px w-12 bg-gold/50"></span>
-                  <p class="mt-4 text-sm leading-relaxed text-foreground/85 font-medium">
-                    Daughter of Abdul Rahiman &amp; Amina
-                  </p>
-                  <p class="mt-3 text-xs leading-relaxed text-foreground/70">
-                    Dharmanagar House, Vorkady Post,<br />Kasaragod
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="reveal flex items-center justify-center" style="transition-delay: 200ms;">
-              <span class="font-serif text-5xl italic text-gold md:text-6xl">&amp;</span>
-            </div>
-
-            <!-- Groom Card -->
-            <div class="reveal" style="transition-delay: 300ms;">
-              <div class="group relative flex h-full flex-col items-center justify-between border border-gold/30 bg-warm-white px-8 py-12 text-center transition-all duration-500 hover:border-gold/70 hover:shadow-xl hover:shadow-burgundy/5">
-                <div class="flex flex-col items-center">
-                  <div class="flex size-28 items-center justify-center rounded-full border border-gold/50 bg-ivory transition-transform duration-500 group-hover:scale-105">
-                    <span class="font-serif text-5xl text-burgundy">A</span>
-                  </div>
-                  <p class="mt-6 font-sans text-xs uppercase tracking-[0.35em] text-gold">The Groom</p>
-                  <h3 class="mt-3 font-serif text-3xl text-burgundy sm:text-4xl">Mohammad Ashil</h3>
-                  <span class="mt-4 h-px w-12 bg-gold/50"></span>
-                  <p class="mt-4 text-sm leading-relaxed text-foreground/85 font-medium">
-                    Son of Mrs. Mumthaz<br />
-                    <span class="text-foreground/70 text-xs font-normal">(Wife of Marhoom Haji Baithar Abdul Hameed)</span>
-                  </p>
-                  <p class="mt-3 text-xs leading-relaxed text-foreground/70">
-                    Grandson of Marhoom Haji K. Hasanabba<br />&amp; Marhoom Haji B. Hamabba
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Countdown Section -->
-      <section class="relative overflow-hidden bg-deep-burgundy py-24 text-ivory md:py-32">
-        <div class="pointer-events-none absolute inset-0 opacity-[0.12]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='none' stroke='%23d8c39a' stroke-width='1'%3E%3Cpath d='M45 6c10 15 24 15 34 0M45 84c10-15 24-15 34 0M6 45c15-10 15-24 0-34M84 45c-15-10-15-24 0-34'/%3E%3Ccircle cx='45' cy='45' r='20'/%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 90px 90px;" aria-hidden="true"></div>
-        <div class="relative mx-auto max-w-4xl px-6 text-center">
-          <div class="reveal">
-            <span class="font-sans text-xs uppercase tracking-[0.35em] text-gold">Save the Date</span>
-            <h2 class="mt-5 text-balance font-serif text-4xl font-light text-champagne sm:text-5xl">Counting Down to Our Forever</h2>
-            <div class="flex items-center justify-center gap-3 mt-7" aria-hidden="true">
-              <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70 sm:w-24"></span>
-              <svg width="46" height="16" viewBox="0 0 46 16" fill="none" class="text-gold">
-                <path d="M23 2c2.5 3 5 4 8 4-3 0-5.5 1-8 4-2.5-3-5-4-8-4 3 0 5.5-1 8-4Z" fill="currentColor" fill-opacity="0.9"></path>
-                <circle cx="4" cy="8" r="1.6" fill="currentColor"></circle>
-                <circle cx="42" cy="8" r="1.6" fill="currentColor"></circle>
-                <path d="M9 8h6M31 8h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
-              </svg>
-              <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70 sm:w-24"></span>
-            </div>
-          </div>
-
-          <div class="reveal" style="transition-delay: 150ms;">
-            <div class="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
-              <div class="flex flex-col items-center border border-gold/30 bg-burgundy/40 px-4 py-7 backdrop-blur-sm">
-                <span id="countdown-days" class="font-serif text-5xl font-light tabular-nums text-champagne sm:text-6xl">--</span>
-                <span class="mt-3 font-sans text-[0.65rem] uppercase tracking-[0.3em] text-ivory/70">Days</span>
-              </div>
-              <div class="flex flex-col items-center border border-gold/30 bg-burgundy/40 px-4 py-7 backdrop-blur-sm">
-                <span id="countdown-hours" class="font-serif text-5xl font-light tabular-nums text-champagne sm:text-6xl">--</span>
-                <span class="mt-3 font-sans text-[0.65rem] uppercase tracking-[0.3em] text-ivory/70">Hours</span>
-              </div>
-              <div class="flex flex-col items-center border border-gold/30 bg-burgundy/40 px-4 py-7 backdrop-blur-sm">
-                <span id="countdown-minutes" class="font-serif text-5xl font-light tabular-nums text-champagne sm:text-6xl">--</span>
-                <span class="mt-3 font-sans text-[0.65rem] uppercase tracking-[0.3em] text-ivory/70">Minutes</span>
-              </div>
-              <div class="flex flex-col items-center border border-gold/30 bg-burgundy/40 px-4 py-7 backdrop-blur-sm">
-                <span id="countdown-seconds" class="font-serif text-5xl font-light tabular-nums text-champagne sm:text-6xl">--</span>
-                <span class="mt-3 font-sans text-[0.65rem] uppercase tracking-[0.3em] text-ivory/70">Seconds</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="reveal" style="transition-delay: 250ms;">
-            <p class="mt-10 font-serif text-xl italic text-champagne/90">
-              11 · DECEMBER · 2026 (2 Rajab 1448 AH) — After Asar Namaz
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Our Story Section -->
-      <section id="story" class="relative overflow-hidden bg-warm-white py-24 md:py-32">
-        <div class="mx-auto max-w-3xl px-6">
-          <div class="reveal text-center">
-            <span class="font-sans text-xs uppercase tracking-[0.35em] text-gold">Written by Destiny</span>
-            <h2 class="mt-5 text-balance font-serif text-4xl font-light text-burgundy sm:text-5xl">Our Story</h2>
-            <div class="flex items-center justify-center gap-3 mt-7" aria-hidden="true">
-              <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70 sm:w-24"></span>
-              <svg width="46" height="16" viewBox="0 0 46 16" fill="none" class="text-gold">
-                <path d="M23 2c2.5 3 5 4 8 4-3 0-5.5 1-8 4-2.5-3-5-4-8-4 3 0 5.5-1 8-4Z" fill="currentColor" fill-opacity="0.9"></path>
-                <circle cx="4" cy="8" r="1.6" fill="currentColor"></circle>
-                <circle cx="42" cy="8" r="1.6" fill="currentColor"></circle>
-                <path d="M9 8h6M31 8h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
-              </svg>
-              <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70 sm:w-24"></span>
-            </div>
-          </div>
-
-          <div class="reveal mx-auto mt-16 max-w-2xl text-center">
-            <p class="text-pretty font-serif text-xl leading-relaxed text-foreground/75 sm:text-2xl">
-              What began with a quiet meeting grew into a love rooted in faith, kindness, and cherished moments. With grateful hearts and the blessings of our families, we now begin our beautiful journey together, insha'Allah.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- The Venue & Ceremonies Section -->
-      <section id="venue" class="relative overflow-hidden bg-ivory py-24 md:py-32">
-        <div class="pointer-events-none absolute inset-0 arabesque opacity-50"></div>
-        <div class="relative mx-auto max-w-6xl px-6">
-          <div class="reveal text-center">
-            <span class="font-sans text-xs uppercase tracking-[0.35em] text-gold">Wedding Program</span>
-            <h2 class="mt-5 text-balance font-serif text-4xl font-light text-burgundy sm:text-5xl">Ceremonies &amp; Venues</h2>
-            <div class="flex items-center justify-center gap-3 mt-7" aria-hidden="true">
-              <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70 sm:w-24"></span>
-              <svg width="46" height="16" viewBox="0 0 46 16" fill="none" class="text-gold">
-                <path d="M23 2c2.5 3 5 4 8 4-3 0-5.5 1-8 4-2.5-3-5-4-8-4 3 0 5.5-1 8-4Z" fill="currentColor" fill-opacity="0.9"></path>
-                <circle cx="4" cy="8" r="1.6" fill="currentColor"></circle>
-                <circle cx="42" cy="8" r="1.6" fill="currentColor"></circle>
-                <path d="M9 8h6M31 8h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
-              </svg>
-              <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70 sm:w-24"></span>
-            </div>
-          </div>
-
-          <!-- 3 Ceremony Cards Grid -->
-          <div class="mt-14 grid gap-8 md:grid-cols-3">
-            <!-- 1. Nikah Ceremony -->
-            <div class="reveal" style="transition-delay: 100ms;">
-              <div class="flex h-full flex-col justify-between border border-gold/30 bg-warm-white p-7 sm:p-8 transition-all duration-500 hover:border-gold/70 hover:shadow-xl hover:shadow-burgundy/5">
-                <div>
-                  <div class="flex items-center justify-between border-b border-gold/20 pb-3">
-                    <span class="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-gold">01 • Nikah</span>
-                    <span class="font-arabic text-sm text-gold">عقد النكاح</span>
-                  </div>
-                  <h3 class="mt-5 font-serif text-2xl text-burgundy">Nikah Ceremony</h3>
-                  <p class="mt-1 font-serif text-lg font-light text-foreground/80">Seyyid Madani Dargah &amp; Juma Masjid</p>
-                  <span class="mt-4 block h-px w-12 bg-gold/50"></span>
-                  <ul class="mt-6 space-y-4 text-left">
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path></svg>
-                      <div class="leading-snug text-foreground/80 text-sm">
-                        <span class="font-medium text-burgundy">Thursday, 11 Dec 2026</span>
-                        <p class="text-xs text-foreground/60 mt-0.5">2 Rajab 1448 AH</p>
-                      </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-                      <span class="text-sm text-foreground/80">After Asar Namaz</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                      <span class="text-sm leading-relaxed text-foreground/80">Ullal, Mangalore</span>
-                    </li>
-                  </ul>
-                </div>
-                <a href="https://maps.google.com/?q=Seyyid+Madani+Dargah+and+Juma+Masjid+Ullal+Mangalore" target="_blank" rel="noopener noreferrer" class="group mt-8 inline-flex items-center justify-center gap-2 rounded-sm border border-gold bg-burgundy px-5 py-3 font-sans text-xs uppercase tracking-[0.25em] text-ivory transition-all duration-500 hover:tracking-[0.35em]">
-                  Directions
-                </a>
-              </div>
-            </div>
-
-            <!-- 2. Wedding Ceremony -->
-            <div class="reveal" style="transition-delay: 200ms;">
-              <div class="flex h-full flex-col justify-between border border-gold/30 bg-warm-white p-7 sm:p-8 transition-all duration-500 hover:border-gold/70 hover:shadow-xl hover:shadow-burgundy/5">
-                <div>
-                  <div class="flex items-center justify-between border-b border-gold/20 pb-3">
-                    <span class="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-gold">02 • Wedding</span>
-                    <span class="font-arabic text-sm text-gold">حفل الزفاف</span>
-                  </div>
-                  <h3 class="mt-5 font-serif text-2xl text-burgundy">Wedding Ceremony</h3>
-                  <p class="mt-1 font-serif text-lg font-light text-foreground/80">AH Palace</p>
-                  <span class="mt-4 block h-px w-12 bg-gold/50"></span>
-                  <ul class="mt-6 space-y-4 text-left">
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path></svg>
-                      <div class="leading-snug text-foreground/80 text-sm">
-                        <span class="font-medium text-burgundy">Sunday, 13 Dec 2026</span>
-                        <p class="text-xs text-foreground/60 mt-0.5">4 Rajab 1448 AH</p>
-                      </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-                      <span class="text-sm text-foreground/80">5:00 PM onwards</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                      <span class="text-sm leading-relaxed text-foreground/80">Hosangady</span>
-                    </li>
-                  </ul>
-                </div>
-                <a href="https://maps.google.com/?q=AH+Palace+Hosangady" target="_blank" rel="noopener noreferrer" class="group mt-8 inline-flex items-center justify-center gap-2 rounded-sm border border-gold bg-burgundy px-5 py-3 font-sans text-xs uppercase tracking-[0.25em] text-ivory transition-all duration-500 hover:tracking-[0.35em]">
-                  Directions
-                </a>
-              </div>
-            </div>
-
-            <!-- 3. Wedding Reception -->
-            <div class="reveal" style="transition-delay: 300ms;">
-              <div class="flex h-full flex-col justify-between border border-gold/30 bg-warm-white p-7 sm:p-8 transition-all duration-500 hover:border-gold/70 hover:shadow-xl hover:shadow-burgundy/5">
-                <div>
-                  <div class="flex items-center justify-between border-b border-gold/20 pb-3">
-                    <span class="font-sans text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-gold">03 • Reception</span>
-                    <span class="font-arabic text-sm text-gold">حفل الإستقبال</span>
-                  </div>
-                  <h3 class="mt-5 font-serif text-2xl text-burgundy">Wedding Reception</h3>
-                  <p class="mt-1 font-serif text-lg font-light text-foreground/80">Deccan Garden</p>
-                  <span class="mt-4 block h-px w-12 bg-gold/50"></span>
-                  <ul class="mt-6 space-y-4 text-left">
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path></svg>
-                      <div class="leading-snug text-foreground/80 text-sm">
-                        <span class="font-medium text-burgundy">Monday, 14 Dec 2026</span>
-                      </div>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-                      <span class="text-sm text-foreground/80">1:00 PM onwards</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                      <span class="text-sm leading-relaxed text-foreground/80">Kuthar, Mangalore</span>
-                    </li>
-                  </ul>
-                </div>
-                <a href="https://maps.google.com/?q=Deccan+Garden+Kuthar+Mangalore" target="_blank" rel="noopener noreferrer" class="group mt-8 inline-flex items-center justify-center gap-2 rounded-sm border border-gold bg-burgundy px-5 py-3 font-sans text-xs uppercase tracking-[0.25em] text-ivory transition-all duration-500 hover:tracking-[0.35em]">
-                  Directions
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Footer Section -->
-      <footer class="relative overflow-hidden bg-deep-burgundy py-24 text-center text-ivory md:py-32">
-        <img src="images/floral-corner.png" alt="" aria-hidden="true" width="420" height="420" class="blend-floral pointer-events-none absolute -left-6 -top-6 w-40 opacity-70 sm:w-56" />
-        <img src="images/floral-corner.png" alt="" aria-hidden="true" width="420" height="420" class="blend-floral pointer-events-none absolute -bottom-6 -right-6 w-40 -scale-x-100 -scale-y-100 opacity-70 sm:w-56" />
-        
-        <div class="relative z-10 mx-auto max-w-2xl px-6">
-          <div class="reveal">
-            <p dir="rtl" lang="ar" class="font-arabic text-xl leading-relaxed text-champagne sm:text-2xl">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
-            <p class="mt-4 text-sm italic text-ivory/70">“May Allah bless you, and shower His blessings upon you, and join you together in goodness.”</p>
-          </div>
-
-          <div class="reveal" style="transition-delay: 150ms;">
-            <div class="flex items-center justify-center gap-3 mt-10" aria-hidden="true">
-              <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70 sm:w-24"></span>
-              <svg width="46" height="16" viewBox="0 0 46 16" fill="none" class="text-gold">
-                <path d="M23 2c2.5 3 5 4 8 4-3 0-5.5 1-8 4-2.5-3-5-4-8-4 3 0 5.5-1 8-4Z" fill="currentColor" fill-opacity="0.9"></path>
-                <circle cx="4" cy="8" r="1.6" fill="currentColor"></circle>
-                <circle cx="42" cy="8" r="1.6" fill="currentColor"></circle>
-                <path d="M9 8h6M31 8h6" stroke="currentColor" stroke-width="1" stroke-linecap="round"></path>
-              </svg>
-              <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70 sm:w-24"></span>
-            </div>
-            <h2 class="mt-10 font-serif text-4xl sm:text-5xl md:text-6xl font-light text-champagne text-balance">
-              Mohammad Ashil<span class="mx-3 italic text-gold">&amp;</span>Dr. Mariyamath Saliya
-            </h2>
-            <p class="mt-6 font-sans text-xs uppercase tracking-[0.4em] text-ivory/70">11 • DECEMBER • 2026</p>
-            <p class="mt-10 text-pretty text-sm leading-relaxed text-ivory/60">Your presence and prayers are the greatest gift as we begin our journey together, insha’Allah.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+  <main>
+    <section class="hero" id="home"></section>
+    <section class="section welcome" id="invitation"></section>
+    <section class="section couple" id="couple"></section>
+    <section class="section countdown" id="countdown"></section>
+    <section class="section story" id="story"></section>
+    <section class="section venue" id="venue"></section>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="footer" id="footer"></footer>
+
+  <button class="music-btn" id="musicBtn" aria-label="Play music" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+  </button>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

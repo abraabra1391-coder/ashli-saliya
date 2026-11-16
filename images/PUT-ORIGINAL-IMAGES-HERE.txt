@@ -1,0 +1,5 @@
+Save these two images from the original site into this folder, keeping the names:
+  floral-corner.png  ->  https://ashli-saliya.vercel.app/images/floral-corner.png
+  floral-branch.png  ->  https://ashli-saliya.vercel.app/images/floral-branch.png
+(Open each link in Chrome, right-click the image, "Save Image As...")
+Until they are here, drawn stand-ins are shown.

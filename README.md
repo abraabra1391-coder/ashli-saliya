@@ -1,49 +1,17 @@
-# ashli-saliya
-# Ashil & Dr. Saliya - Muslim Wedding Invitation
+# Wedding Invitation Website
 
-Wedding Invitation website for **Mohammad Ashil & Dr. Mariyamath Saliya**.
+Open `index.html` in a browser. No build step.
 
-## Ceremonies & Schedule
+## Change the details
+Edit **js/config.js** only: names, dates, venues, map links, countdown time,
+Arabic text, music and image paths.
 
-1. **Nikah Ceremony**
-   - **Date**: Thursday, 11 December 2026 (2 Rajab 1448 AH)
-   - **Time**: After Asar Namaz
-   - **Location**: Seyyid Madani Dargah and Juma Masjid, Ullal, Mangalore
+- Countdown: `countdown.target` — ISO date with time-zone, e.g. `2026-12-11T16:00:00+05:30`
+- Music: put an mp3 in `/audio`, set `music.src`
+- Florals: replace files in `/images` or point `images.*` at your own PNG/SVG
 
-2. **Wedding Ceremony**
-   - **Date**: Sunday, 13 December 2026 (4 Rajab 1448 AH)
-   - **Time**: 5:00 PM onwards
-   - **Location**: AH Palace, Hosangady
+## Change colours / fonts
+Top of **css/style.css** (`:root` variables).
 
-3. **Wedding Reception**
-   - **Date**: Monday, 14 December 2026
-   - **Time**: 1:00 PM onwards
-   - **Location**: Deccan Garden, Kuthar, Mangalore
-
-## Project Structure
-
-```
-muslimwedding/
-├── index.html        # Main HTML markup
-├── style.css         # Compiled stylesheet & animations
-├── script.js         # Interactive logic, audio & live countdown
-├── favicon.svg       # Favicon
-├── vercel.json       # Vercel deployment config
-├── package.json      # NPM config
-├── images/
-│   ├── floral-corner.png
-│   └── floral-branch.png
-└── audio/
-    └── anlatmam.mp3
-```
-
-## How to Run
-
-Open `index.html` in any browser, or run a local static server:
-```bash
-npx serve .
-```
-or
-```bash
-python3 -m http.server 4000
-```
+## Publish
+Upload the whole folder to Vercel, Netlify or GitHub Pages.
